@@ -1,0 +1,39 @@
+//Daniel Carter
+//Lab Assignment 1 : Recursive
+
+#include<iostream>
+
+using namespace std;
+void reverse(int num);
+int main() {
+
+	int num;
+
+	cout << "Enter a number: ";
+	cin >> num;
+
+	while (num < 0) {
+		cout << "Please enter a positive number!"<<endl;
+		cout << "Enter a number: ";
+		cin >> num;
+		cout << endl;
+	}
+
+	reverse(num);
+	cout << endl;
+
+
+
+	system("pause");
+	return 0;
+}
+void reverse(int num) {
+	 
+	if (num < 10) {
+		cout << num; // calls the base
+}
+	else {
+		cout << num % 10;
+		reverse(num / 10); // calls the recursion number 
+	}
+}
